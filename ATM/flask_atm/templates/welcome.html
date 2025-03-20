@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card p-4">
+    <div class="text-center mb-4">
+        <i class="fas fa-university fa-4x text-primary"></i>
+    </div>
+    <h1 class="text-center mb-4">Welcome to ATM</h1>
+    <div class="text-center">
+        <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">Start</a>
+    </div>
+</div>
+{% endblock %}
