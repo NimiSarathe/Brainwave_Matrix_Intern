@@ -1,1 +1,1 @@
-{"1234": {"pin": "1234", "balance": 800.0, "transactions": [{"type": "Withdraw", "amount": 200.0, "balance": 800.0, "date": "2025-03-18 14:17:22"}]}}
+{"1234": {"pin": "1234", "balance": 1400.0, "transactions": [{"type": "Withdraw", "amount": 200.0, "balance": 800.0, "date": "2025-03-18 14:17:22"}, {"type": "Withdraw", "amount": 400.0, "balance": 400.0, "date": "2025-03-22 18:18:27"}, {"type": "Deposit", "amount": 1000.0, "balance": 1400.0, "date": "2025-03-22 18:18:43"}]}}

@@ -8,8 +8,8 @@ class ATM:
     def __init__(self):
         self.window = tk.Tk()
         self.window.title("ATM System")
-        self.window.geometry("400x600")
-        self.window.configure(bg="#f0f0f0")
+        self.window.geometry("1500x1500")
+        self.window.configure(bg="blue")
         
         # Initialize account data
         self.current_user = None
@@ -39,15 +39,16 @@ class ATM:
             json.dump(self.accounts, f)
     
     def create_welcome_frame(self):
-        self.welcome_frame = tk.Frame(self.window, bg="#f0f0f0")
+        self.welcome_frame = tk.Frame(self.window, bg="blue")
         
         welcome_label = tk.Label(
             self.welcome_frame,
             text="Welcome to ATM",
             font=("Arial", 24, "bold"),
-            bg="#f0f0f0"
+            bg="orangered",
+           # col="white"
         )
-        welcome_label.pack(pady=50)
+        welcome_label.pack(pady=100)
         
         start_button = tk.Button(
             self.welcome_frame,
@@ -55,22 +56,24 @@ class ATM:
             command=lambda: self.show_frame(self.login_frame),
             font=("Arial", 14),
             width=20,
-            height=2
+            height=5,
+            bg="orangered",
+            #col="white"
         )
         start_button.pack(pady=20)
     
     def create_login_frame(self):
-        self.login_frame = tk.Frame(self.window, bg="#f0f0f0")
+        self.login_frame = tk.Frame(self.window, bg="#f0f0f0",pady=100)
         
         tk.Label(
             self.login_frame,
             text="Account Number",
             font=("Arial", 12),
             bg="#f0f0f0"
-        ).pack(pady=10)
+        ).pack(pady=20)
         
         self.account_entry = tk.Entry(self.login_frame, font=("Arial", 12))
-        self.account_entry.pack(pady=5)
+        self.account_entry.pack(pady=50)
         
         tk.Label(
             self.login_frame,
@@ -87,17 +90,17 @@ class ATM:
             text="Login",
             command=self.login,
             font=("Arial", 12),
-            width=15,
+            width=60,
             height=1
         )
-        login_button.pack(pady=20)
+        login_button.pack(pady=10)
         
         back_button = tk.Button(
             self.login_frame,
             text="Back",
             command=lambda: self.show_frame(self.welcome_frame),
             font=("Arial", 12),
-            width=15,
+            width=60,
             height=1
         )
         back_button.pack(pady=10)
@@ -149,7 +152,7 @@ class ATM:
             text="Withdraw",
             command=self.withdraw,
             font=("Arial", 12),
-            width=15,
+            width=60,
             height=1
         )
         withdraw_button.pack(pady=10)
@@ -159,7 +162,7 @@ class ATM:
             text="Deposit",
             command=self.deposit,
             font=("Arial", 12),
-            width=15,
+            width=60,
             height=1
         )
         deposit_button.pack(pady=10)
@@ -169,7 +172,7 @@ class ATM:
             text="Back to Main Menu",
             command=lambda: self.show_frame(self.main_menu_frame),
             font=("Arial", 12),
-            width=15,
+            width=60,
             height=1
         )
         back_button.pack(pady=10)
